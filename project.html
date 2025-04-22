@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoperCore AI Dashboard</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navbar" >
+        <!-- Brand/logo -->
+
+        <div class="container-fluid">
+          <!-- Links -->
+          <a class="navbar-brand">Logo</a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Upload file</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="project.html">Add project</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="map.html">Map</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="help.html">Help</a>
+            </li>
+            
+          </ul>
+        </div>
+      
+      </nav>
+      <br>
+    
+      <h1>CoperCore AI Dashboard</h1>
+
+        <!-- Sidebar menu -->
+        <!-- Main content area -->
+        <div class="container mt-4">
+            <div class="main-content">
+            <!-- Button trigger modal -->
+          <!-- Button trigger modal -->
+
+          
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           Add project
+          </button>
+
+
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create project</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="add_projet" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="dataset_name" class="form-label">Project_name</label>
+                        <input type="text" class="form-control" id="project_name" name="project_name" required><br>
+                        <label for="user_name" class="form-label" >User name</label>
+                        <input type="text" class="form-control" id="user_name" name="user_name" required>
+                        <label for="formFile" class="form-label">Credits</label>
+                        <input class="form-control" type="text" id="credits" name="credits"><br>
+
+                    </div>
+                    <!--PROJECT NAME-->
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+              </div>
+            </div>
+            </div>
+            <br>
+            <br>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Project name</th>
+                        <th>Date created</th>
+                        <th>Date updated</th>
+                        <th>created by</th>
+                        <th>size</th>
+                        <th>credits</th>
+                        <th>open project</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>project1</td>
+                        <td>2025-10-01</td>
+                        <td>2025-10-02</td>
+                        <td>user1</td>
+                        <td>2025 MB</td>
+                        <td>john doe</td>
+                        <td><a href="#">Open project</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </div>
+</div>
+</body>
+</html>
